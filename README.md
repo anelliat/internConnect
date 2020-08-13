@@ -17,3 +17,4 @@ The skill plays out an Amazon principle and asks the user if they would like to 
 5) Broadcast information to all interns: 
 This feature was added to allow Student programs to reach out to interns via Alexa, providing them any additional details for pre-onboarding.
 
+Link to testing the skill: - https://tinyurl.com/yxal5e4q
