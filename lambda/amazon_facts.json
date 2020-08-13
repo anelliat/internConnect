@@ -1,0 +1,13 @@
+{
+		"GET_FACT_MESSAGE": "Did you know? {}",
+		"FACTS": [
+			"Amazon wasn't the company's original name. Jeff Bezos originally wanted to give the company the magical sounding name Cadabra.",
+			"The volunteer's at Amazon's banana stand are called banista.",
+			"You can get free bananas at Amazon's banana stand in Seattle.",
+			"Otter, is an office building in Belltown. Otter was the code name for the first Kindle Fire.",
+			"Doppler is named after the first codename for Amazon’s Echo voice operated home assistant.",
+			"Amazon's building Fiona is named after Fiona, the code name for the first Kindle while it was under development, which in turn was named after a character in The Diamond Age.",
+			"Amazon's low flying hawk building was named after a customer who went by that alias on the AWS forums.This person was the most vocal, demanded the highest standards, and the most critical of AWS."
+		]
+	
+}

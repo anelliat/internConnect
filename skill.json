@@ -1,0 +1,92 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Skill for connecting with amazon interns",
+          "examplePhrases": [
+            "Alexa open intern connect",
+            "Alexa launch Intern connect",
+            "Alexa ask Intern connect to play a message"
+          ],
+          "keywords": [
+            "Amazon",
+            "intern",
+            "principle",
+            "fun",
+            "facts"
+          ],
+          "name": "Intern Connect",
+          "description": "Get excited to start your internship at Amazon!\nUsing Intern Connect you can bridge the gap between other interns while learning some fun facts about Amazon!\nDon\u0027t worry we got you covered on the Leadership Principles as well.\n\n1) Save a message that can be played by other interns\n2) Play a message from other interns at random\n3) Listen to an Amazon Fact of the Day and to Amazon\u0027s Leadership Principles",
+          "smallIconUri": "file://assets/images/en-US_smallIconUri.png",
+          "largeIconUri": "file://assets/images/en-US_largeIconUri.png"
+        }
+      },
+      "automaticDistribution": {
+        "sourceLocaleForLanguages": [
+          {
+            "sourceLocale": "en-US",
+            "language": "en"
+          }
+        ],
+        "isActive": true
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Just play around with the app and let us know.",
+      "category": "COMMUNICATION",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:811625065351:function:bf069871-888c-4c66-86d2-76d8b2051c87:Release_0"
+        },
+        "interfaces": [
+          {
+            "minimumTemplateVersion": "1.0",
+            "type": "RENDER_TEMPLATE"
+          }
+        ],
+        "regions": {
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:eu-west-1:811625065351:function:bf069871-888c-4c66-86d2-76d8b2051c87:Release_0"
+            }
+          },
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:811625065351:function:bf069871-888c-4c66-86d2-76d8b2051c87:Release_0"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-west-2:811625065351:function:bf069871-888c-4c66-86d2-76d8b2051c87:Release_0"
+            }
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [
+      {
+        "name": "alexa::profile:name:read"
+      },
+      {
+        "name": "alexa::profile:email:read"
+      }
+    ],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "en-US": {
+          "termsOfUseUrl": "https://aws.amazon.com/privacy/?nc1\u003df_pr",
+          "privacyPolicyUrl": "https://aws.amazon.com/privacy/?nc1\u003df_pr"
+        }
+      },
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "usesPersonalInfo": true
+    }
+  }
+}

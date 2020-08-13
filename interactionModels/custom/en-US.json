@@ -1,0 +1,253 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "intern connect",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "stop intern jam"
+          ]
+        },
+        {
+          "name": "SendAMessageIntent",
+          "slots": [
+            {
+              "name": "message",
+              "type": "AMAZON.Person",
+              "samples": [
+                "{message}"
+              ]
+            }
+          ],
+          "samples": [
+            "Send a message",
+            "Send a message {message}",
+            "Introduce myself  {message}",
+            "Talk about myself  {message}",
+            "I want to send a message {message}"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "FactOfTheDayIntent",
+          "slots": [],
+          "samples": [
+            "Tell me a fact",
+            "fact",
+            "amazon fact",
+            "What is today\u0027s Amazon Fact",
+            "Tell me the Fact of the Day"
+          ]
+        },
+        {
+          "name": "ReceiveAMessageIntent",
+          "slots": [
+            {
+              "name": "confirmation",
+              "type": "AMAZON.Person"
+            }
+          ],
+          "samples": [
+            "Introduce me to an intern",
+            "Play a message",
+            "What are the other interns upto",
+            "Read me a message from an intern",
+            "I wanna hear a message"
+          ]
+        },
+        {
+          "name": "BroadcastAMessage",
+          "slots": [
+            {
+              "name": "message",
+              "type": "AMAZON.Person"
+            }
+          ],
+          "samples": [
+            "Broadcast a message to all interns {message}",
+            "Can you send a message to all interns {message}",
+            "Broadcast a message {message}"
+          ]
+        },
+        {
+          "name": "LeadershipPrincipleIntent",
+          "slots": [],
+          "samples": [
+            "today\u0027s leadership principle",
+            "leadership principle of the day",
+            "leadership principle for today",
+            "tell me today\u0027s leadership principle",
+            "leadership principle",
+            "leadership",
+            "What\u0027s today\u0027s leadership principle"
+          ]
+        },
+        {
+          "name": "YesIntent",
+          "slots": [],
+          "samples": [
+            "Yes"
+          ]
+        },
+        {
+          "name": "NoIntent",
+          "slots": [],
+          "samples": [
+            "No"
+          ]
+        },
+        {
+          "name": "AMAZON.MoreIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateSettingsIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageUpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PreviousIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollRightIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollLeftIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollUpIntent",
+          "samples": []
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "SendAMessageIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "message",
+              "type": "AMAZON.Person",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.1441378855882.734475158283",
+                "elicitation": "Elicit.Slot.996729206930.274600838792"
+              }
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        },
+        {
+          "name": "BroadcastAMessage",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "message",
+              "type": "AMAZON.Person",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1107132871222.264567891497"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.996729206930.274600838792",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What do you wish to say"
+          },
+          {
+            "type": "PlainText",
+            "value": "What message would you like to send"
+          },
+          {
+            "type": "PlainText",
+            "value": "What would you like to send"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1441378855882.734475158283",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Do you wish to send the message - {message} to your fellow interns?"
+          },
+          {
+            "type": "PlainText",
+            "value": "I\u0027ve recorded your message - {message} . Would you like me to send it?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.193919354830",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Are you sure you want to send this message to all contacts?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Okay, I will send the message to all contacts. Is that fine?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1107132871222.264567891497",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Okay, what shall I send as the message?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Sure, what will the message be?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "51"
+}
